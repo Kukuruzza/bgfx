@@ -381,7 +381,7 @@ namespace bgfx
 			hr = factory5->CheckFeatureSupport(DXGI_FEATURE_PRESENT_ALLOW_TEARING, &allowTearing, sizeof(allowTearing) );
 			BX_TRACE("Allow tearing is %ssupported.", allowTearing ? "" : "not ");
 
-			scdFlags |= allowTearing ? DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING : 0;
+			//scdFlags |= allowTearing ? DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING : 0;
 			scdFlags |= false
 				|| _scd.swapEffect == DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL
 				|| _scd.swapEffect == DXGI_SWAP_EFFECT_FLIP_DISCARD
@@ -664,7 +664,7 @@ namespace bgfx
 			hr = factory5->CheckFeatureSupport(DXGI_FEATURE_PRESENT_ALLOW_TEARING, &allowTearing, sizeof(allowTearing));
 			BX_TRACE("Allow tearing is %ssupported.", allowTearing ? "" : "not ");
 
-			scdFlags |= allowTearing ? DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING : 0;
+			//scdFlags |= allowTearing ? DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING : 0;
 			scdFlags |= false
 				|| _scd.swapEffect == DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL
 				|| _scd.swapEffect == DXGI_SWAP_EFFECT_FLIP_DISCARD

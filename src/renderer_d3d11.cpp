@@ -1006,6 +1006,10 @@ namespace bgfx { namespace d3d11
 
 					m_swapBufferCount = bx::clamp<uint8_t>(_init.resolution.numBackBuffers, 2, BGFX_CONFIG_MAX_BACK_BUFFERS);
 
+
+					m_swapEffect = DXGI_SWAP_EFFECT_DISCARD;
+					m_swapBufferCount = 1;
+					
 					bx::memSet(&m_scd, 0, sizeof(m_scd) );
 					m_scd.width  = _init.resolution.width;
 					m_scd.height = _init.resolution.height;
